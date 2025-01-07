@@ -1,7 +1,7 @@
 name: cats-dogs-other
 
 docker_env:
-  image: local/cats-dogs-other-train
+  image: quay.io/kto_gthomas/kto/train/cats-dogs-other
 
 entry_points:
   main:
@@ -10,7 +10,7 @@ entry_points:
         split_ratio_evaluate: {type: float, default: 0.1}
         split_ratio_test: {type: float, default: 0.1}
         batch_size: {type: int, default: 64}
-        epochs: {type: int, default: 1}
+        epochs: {type: int, default: 4}
         working_dir: {type: str, default: ./cats_dogs_other/train/dist}
         model_filename: {type: str, default: final_model.keras}
         model_plot_filename: {type: str, default: model_plot.png}
